@@ -9,7 +9,7 @@ app = Potassium("my_app")
 @app.init
 def init():
     device = 0 if torch.cuda.is_available() else -1
-    model = pipeline('image-to-text', model='nlpconnect/vit-gpt2-image-captioning', device=device)
+    model = pipeline('image-to-text', model='Salesforce/instructblip-flan-t5-xl', device=device)
    
     context = {
         "model": model
